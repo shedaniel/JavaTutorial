@@ -1,5 +1,5 @@
-# Beginners
-We will put it into different sections
+# Beginners 1.1
+We will put 1.1 into different sections
 - Hello World
 - Variables
 - if / else if
@@ -9,11 +9,6 @@ We will put it into different sections
 - For Loop in List
 - Functions
 - JOptionPane
-- Returning
-- Breaking
-- Switching
-- Scanner
-- Comments
 
 ### Hello World
 A basic print is somewhat like this:
@@ -171,3 +166,44 @@ for (int i : numbers) {
 }
 ```
 This code will loop over each item in the list numbers.
+### Functions
+Functions in java are known as void, a basic function looks like this:
+```java
+public class Main {
+	public static void testFunction() {
+    	//Random Stuff
+    }
+}
+```
+testFunction is a method we defined in class Main. Notice a few things about foo.
+- _static_ means this method belongs to the class Main and not to a specific instance of Main. Which means we can call the method from a different class like that Main.testFunction().
+- _void_ means this method doesn't return a value. Methods can return a single value in Java and it has to be defined in the method declaration. However, you can use return by itself to exit the method.
+This method doesn't get any arguments, but of course Java methods can get arguments as we'll see further on.
+##### Arguments
+You can add arguments to an function:
+```java
+public static void randomStuff(int a, int b) {
+	int sum = a + b;
+    System.out.println(sum);
+}
+```
+This function will require two variables to execute, and basically this just add the two and print them.
+### JOptionPane
+Option Pane is a easy way to display information to the user. A very basic code is like this:
+```java
+JOptionPane.showMessageDialog(null, "Some random text...");
+```
+Of course you can add custom titles with custom icons:
+```java
+JOptionPane.showMessageDialog(null, "Hello World", "Random Title", messageType);
+```
+There are these following message types:
+- ERROR_MESSAGE
+- INFORMATION_MESSAGE
+- WARNING_MESSAGE
+- QUESTION_MESSAGE
+- PLAIN_MESSAGE
+A simple usage here:
+```java
+JOptionPane.showMessageDialog(null, "You are banned from Milk!", "Error", JOptionPane.ERROR_MESSAGE);
+```
